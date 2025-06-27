@@ -1,9 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import NavBar from "/app/components/navigationBar/navigationBar.jsx";
 
 export default function Home() {
   return (
+    
     <div className={styles.page}>
+      <NavBar/>
       <main className={styles.main}>
         <Image
           className={styles.logo}
