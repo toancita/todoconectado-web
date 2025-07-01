@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './hero.module.css'
+import '../../../app/globals.css'
 import { MapPin, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
@@ -14,7 +15,7 @@ export default function Hero() {
 
         <div className={styles.locationContent}>
           <MapPin className={styles.mapPin} />
-          <span className={styles.locationText}>Servicio en toda la región de Arica y Parinacota</span>
+          <span>Servicio en toda la región de Arica y Parinacota</span>
         </div>
 
         <h1 className={styles.titleText}>Tecnología que protege, <br/> 
@@ -28,11 +29,12 @@ export default function Hero() {
 
         <button className={styles.cotizarBtn}>Cotiza ahora</button>
 
-        <div className={styles.chevronDown}>
+      </div>
+
+      <div className={styles.chevronDown}>
          <ChevronDown className={styles.ChevronDown}/>
         </div>
 
-      </div>
     </section>
   );
 }

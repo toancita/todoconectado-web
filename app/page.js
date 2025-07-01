@@ -10,7 +10,7 @@ export default function Home() {
       
       <NavBar/>
       <Hero/>
-
+      
       <main className={styles.main}>
         <Image
           className={styles.logo}
