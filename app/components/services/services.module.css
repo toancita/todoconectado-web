@@ -1,0 +1,133 @@
+.servicesContainer {
+  padding: 5rem 2rem;
+  background: #f9f9f9;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.subtitle {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.subtitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #2c55ff;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.highlight {
+  color: #2c55ff;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  background: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.icon {
+  color: #2c55ff;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.cardButton {
+  padding: 0.5rem 1rem;
+  border: #2c55ff solid 1px;
+  background: transparent;
+  color: #2c55ff;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cardButton:hover {
+    background-color: #2c55ff;
+    color: white;
+}
+
+.card:nth-child(2) .iconWrapper {
+  background: #2c55ff;
+}
+
+.card:nth-child(2) {
+  grid-row: span 2;
+}
+
+.card:nth-child(2) .icon {
+    color: white;
+}
+
+.card:nth-child(2) .cardButton {
+  background: #2c55ff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.card:nth-child(2) .cardButton:hover {
+  background: none;
+  color:#2c55ff;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .card {
+    text-align: left;
+  }
+}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import NavBar from "/app/components/navigationBar/navigationBar.jsx";
 import Hero from "/app/components/hero/hero.jsx";
+import Services from "./components/services/services";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       
       <NavBar/>
       <Hero/>
-      
+      <Services/>
+
       <main className={styles.main}>
         <Image
           className={styles.logo}
