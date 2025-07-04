@@ -1,0 +1,160 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #001d52;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13, 29, 89, 0.85), rgba(0, 17, 51, 0.95));
+  z-index: 1;
+}
+
+.heroImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  z-index: 2;
+  padding-left: 3rem;
+  padding-top: 2rem;
+  color: white;
+}
+
+.locationContent {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f2f6;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 3rem;
+  color: #1e1e1e;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mapPin {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.1rem;
+  background-color: white;
+  border-radius: 20px;
+  animation: pulse 2s infinite;
+}
+
+.titleText {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #0fffcf;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 40rem;
+}
+
+.cotizarBtn {
+  background: transparent;
+  border: 2px solid #0fffcf;
+  color: #0fffcf;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cotizarBtn:hover {
+  background-color: #0fffcf;
+  color: #001d52;
+}
+
+.chevronDown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pulseDown 2s infinite;
+  z-index: 3;
+}
+
+.ChevronDown {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+
+    .heroContent {
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+
+    .heroContainer {
+        text-align: center;
+    }
+
+    .locationContent {
+        padding: 0.5rem 1rem; 
+        margin-bottom: 2rem;
+        font-size: 0.85rem;
+    }
+
+    .mapPin {
+        flex-shrink: 0;
+    }
+
+    .titleText {
+        font-size: clamp(1.8rem, 6vw, 2.2rem);
+        padding-bottom: 1rem;
+    }
+
+    .heroDescription {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    .cotizarBtn {
+        width: 100%;
+        padding: 0.8rem 0;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+
+    .ChevronDown {
+        display: none;
+    }
+
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
