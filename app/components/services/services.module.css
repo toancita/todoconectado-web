@@ -1,6 +1,7 @@
 .servicesContainer {
   padding: 5rem 2rem;
   background: #f9f9f9;
+  width: 100%;
 }
 
 .header {
@@ -130,4 +131,34 @@
   .card {
     text-align: left;
   }
+}
+
+@media (min-width: 1200px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .servicesContainer {
+    background: #101010;
+  }
+
+  .card {
+    background: #181818;
+  }
+
+  .subtitle::before {
+    background: #2c55ff;
+  }
+
+  .iconWrapper {
+    background: #1e1e1e;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+  }
+
+  .cardDescription {
+    color: #ccc;
+  }
+
 }
