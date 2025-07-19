@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import NavBar from "/app/components/navigationBar/navigationBar.jsx";
 import Hero from "/app/components/hero/hero.jsx";
 import Services from "./components/services/services";
+import AchievementCounter from "./components/achievementCounter/achievementCounter";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <NavBar/>
       <Hero/>
       <Services/>
+      <AchievementCounter/>
 
       <main className={styles.main}>
         <Image
