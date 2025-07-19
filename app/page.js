@@ -3,6 +3,7 @@ import NavBar from "/app/components/navigationBar/navigationBar.jsx";
 import Hero from "/app/components/hero/hero.jsx";
 import Services from "./components/services/services";
 import AboutUs from "./components/aboutUs/aboutUs";
+import Footer from "./components/footer/footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero/>
       <Services/>
       <AboutUs />
+      <Footer/>
     </div>
   );
 }

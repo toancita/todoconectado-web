@@ -1,0 +1,72 @@
+.footer {
+    background-color: #172865;
+    color: white;
+    padding: 2rem 3rem;
+}
+
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-weight: 700;
+    padding: 1rem 0;
+    font-size: 24px;
+}
+
+.sectionTitle {
+    font-size: 24px;
+    font-weight: 1000;
+    margin-bottom: 1rem;
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #d7d7d7;
+}
+
+.link:hover {
+    transition: 0.3s ease-in-out color;
+    color: #0fffcf;
+}
+
+.address {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactItem {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.copyrightContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.legalLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+
+.legalLink {
+  color: #B3C1FF;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
