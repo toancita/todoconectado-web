@@ -20,3 +20,13 @@
     background-color: #1c1c1c;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: #4c6ef8;
+  }
+
+  .logo {
+    filter: brightness(0) invert(0.6);
+  }
+}
