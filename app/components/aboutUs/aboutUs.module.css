@@ -1,6 +1,6 @@
 .aboutUsContainer {
   display: flex;
-  padding: 6rem;
+  padding: clamp(2rem, 5vw, 6rem);
   min-height: 80vh;
   background: #192C78;
   background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(63, 81, 157, 1) 100%);
@@ -24,13 +24,13 @@
   aspect-ratio: 2220 / 1578;
   width: 90%;
   position: relative;
-  background-color: #00f9ff;
+  background-color: #0fffcf;
   border-radius: 1rem;
   overflow: visible;
 }
 
 .highlight {
-  color: #00f9ff;
+  color: #0fffcf;
 }
 
 .image {
@@ -76,9 +76,16 @@
  max-width: 200px;
  text-align: center;
  padding: 10px;
+ transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
   background-color: #37FFDB;
   color: #192C78;
+}
+
+@media (min-width: 768px) {
+  .aboutUsContainer {
+    flex-direction: row; /* switch to row on tablets and up */
+  }
 }

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import styles from './contact.module.css'
+import { Send } from 'lucide-react';
 
 export default function Contact() { 
 
@@ -32,7 +33,8 @@ export default function Contact() {
             <textarea placeholder='Cuéntanos en qué te podemos ayudar'></textarea>
 
             <button className={styles.button}>
-              Enviar
+              <span className={styles.buttonText}>Enviar</span>
+              <Send className={styles.sendIcon} />
             </button>
         </div>
       </div>
