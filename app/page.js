@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import NavBar from "/app/components/navigationBar/navigationBar.jsx";
 import Hero from "/app/components/hero/hero.jsx";
 import Services from "./components/services/services";
+import AchievementsCounter from "./components/achievementsCounter/achievementsCounter.jsx";
 import AboutUs from "./components/aboutUs/aboutUs";
 import Footer from "./components/footer/footer";
 import Contact from "./components/contact/contact";
