@@ -4,6 +4,7 @@ import Hero from "/app/components/hero/hero.jsx";
 import Services from "./components/services/services";
 import AboutUs from "./components/aboutUs/aboutUs";
 import Brands from "./components/logoCarousel/logoCarousel";
+import Contact from "./components/contact/contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Services/>
       <AboutUs />
       <Brands />
+      <Contact />
     </div>
   );
 }
