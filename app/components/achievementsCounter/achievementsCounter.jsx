@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useEffect, useState } from "react";
-import styles from './achievementCounter.module.css'
+import styles from './achievementsCounter.module.css';
 import AnimatedNumbers from "react-animated-numbers"
 
 const Achievements = [
@@ -27,7 +27,7 @@ export default function AchievementsCounter() {
     }, []);
 
     return (
-        <div className={styles.achievementContainer}>
+        <div className={styles.achievementsContainer}>
             <div className={styles.countContainer}>
                 {Achievements.map((achievement, i) => (
                     <div key={i} className={styles.achievement}>
