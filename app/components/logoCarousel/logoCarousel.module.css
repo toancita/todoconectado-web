@@ -22,20 +22,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card {
-    background: #181818;
+  .title {
+    color: #4c6ef8;
   }
 
-  .subtitle::before {
-    background: #2c55ff;
-  }
-
-  .iconWrapper {
-    background: #1e1e1e;
-    box-shadow: 0 2px 8px rgba(255,255,255,0.1);
-  }
-
-  .cardDescription {
-    color: #ccc;
+  .logo {
+    filter: brightness(0) invert(0.6);
   }
 }
