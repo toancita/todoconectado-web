@@ -4,6 +4,7 @@ import Hero from "/app/components/hero/hero.jsx";
 import Services from "./components/services/services";
 import AchievementsCounter from "./components/achievementsCounter/achievementsCounter.jsx";
 import AboutUs from "./components/aboutUs/aboutUs";
+import Brands from "./components/logoCarousel/logoCarousel";
 import Footer from "./components/footer/footer";
 import Contact from "./components/contact/contact";
 
@@ -13,9 +14,11 @@ export default function Home() {
       <NavBar/>
       <Hero/>
       <Services/>
+      <AchievementsCounter />
       <AboutUs />
-      <Footer/>
+      <Brands />
       <Contact />
+      <Footer/>
     </div>
   );
 }

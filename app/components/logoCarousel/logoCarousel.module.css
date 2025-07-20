@@ -1,0 +1,22 @@
+.brandsContainer {
+  padding: 5rem 0;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  color: #192C78;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media(prefers-color-scheme: dark) {
+  .title {
+    color: white;
+  }
+  .brandsContainer {
+    background-color: #1c1c1c;
+  }
+}
