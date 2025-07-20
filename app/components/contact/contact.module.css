@@ -5,6 +5,7 @@
   padding: 6rem;
   background: linear-gradient(190deg, #0D1D59 0%, #1D3DBF 100%);
   flex-wrap: wrap;
+  color: white;
 }
 
 .leftContent,
@@ -20,7 +21,7 @@
 }
 
 .highlight {
-  color: #00f9ff;
+  color: #0fffcf;
 }
 
 .subtitle {
@@ -68,6 +69,7 @@
 
 .formContainer h1 {
   color: #192C78;
+  font-size: clamp(1.5rem, 5vw + 1rem, 3rem);
 }
 
 .formContainer input {
@@ -98,21 +100,43 @@
 }
 
 .button {
-  border: solid 1px;
-  border-color: #192C78;
+  border: solid 1px #192C78;
   color: #192C78;
   background-color: white;
   border-radius: 10px;
   align-self: center;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin-top: 1rem;
   font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  gap: 1rem;
+}
+.sendIcon {
+  position: absolute;
+  right: 1rem;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: white;
+  pointer-events: none;
 }
 
 .button:hover {
-  background-color: #192C78;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(29, 51, 191, 1) 100%);
   color: white;
+  padding-right: 2.5rem;
 }
+
+.button:hover .sendIcon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 @media (max-width: 768px) {
   .contactContainer {
@@ -126,8 +150,8 @@
   }
 
   .formContainer {
-    min-width: 100%;
     padding: 2rem;
+    width: min(100%, 600px);
   }
 
   .content {
