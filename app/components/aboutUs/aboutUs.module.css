@@ -4,6 +4,7 @@
   min-height: 80vh;
   background: #192C78;
   background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(63, 81, 157, 1) 100%);
+  color: white;
 }
 
 .leftContent {
