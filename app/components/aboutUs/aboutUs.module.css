@@ -25,16 +25,32 @@
 }
 
 .imageContainer {
-  aspect-ratio: 2220 / 1578;
-  width: 90%;
   position: relative;
-  background-color: #0fffcf;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.imageBackground {
+  width: 480px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  background-color: #00F5C9;
   border-radius: 2rem;
-  overflow: visible;
+  z-index: 1;
+  position: relative;
+  transform: translate(18%, 0%);
 }
 
 .image {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -59%);
+  width: 120%;
+  height: auto;
+  z-index: 2;
+  object-fit: contain;
   border-radius: 1rem;
 }
 
