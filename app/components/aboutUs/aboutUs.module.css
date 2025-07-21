@@ -20,17 +20,17 @@
   padding: 2rem;
 }
 
+.highlight {
+  color: #0fffcf;
+}
+
 .imageContainer {
   aspect-ratio: 2220 / 1578;
   width: 90%;
   position: relative;
   background-color: #0fffcf;
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: visible;
-}
-
-.highlight {
-  color: #0fffcf;
 }
 
 .image {
@@ -62,7 +62,7 @@
 }
 
 .content { 
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: lighter;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -77,15 +77,10 @@
  text-align: center;
  padding: 10px;
  transition: all 0.3s ease-in-out;
+ margin-top: 1rem;
 }
 
 .button:hover {
   background-color: #37FFDB;
   color: #192C78;
-}
-
-@media (min-width: 768px) {
-  .aboutUsContainer {
-    flex-direction: row; /* switch to row on tablets and up */
-  }
 }

@@ -50,9 +50,3 @@
         width: 100%;
     }
 }
-
-@media (prefers-color-scheme: dark) {
-    .achievementsContainer {
-        color: #02d6d6;
-    }
-}
