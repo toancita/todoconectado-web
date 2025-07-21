@@ -22,12 +22,13 @@ export default function AboutUs() {
 
       <div className={styles.rightContent}>
         <div className={styles.imageContainer}>
+          <div className={styles.imageBackground}></div>
           <Image
             src="/about_us_image.webp"
             alt="About us"
-            fill
+            width={600}
+            height={600}
             className={styles.image}
-            style={{ objectFit: 'contain' }}
           />
         </div>
       </div>
