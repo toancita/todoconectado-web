@@ -1,13 +1,24 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import NavBar from "/app/components/navigationBar/navigationBar.jsx";
+import Hero from "/app/components/hero/hero.jsx";
+import Services from "./components/services/services";
+import AchievementsCounter from "./components/achievementsCounter/achievementsCounter.jsx";
+import AboutUs from "./components/aboutUs/aboutUs";
+import Brands from "./components/logoCarousel/logoCarousel";
+import Footer from "./components/footer/footer";
+import Contact from "./components/contact/contact";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <h1>Página en construcción (pronto disponible)</h1>
-        <a href=".">todoconectado.cl</a>
-      </main>
+      <NavBar/>
+      <Hero/>
+      <Services/>
+      <AchievementsCounter />
+      <AboutUs />
+      <Brands />
+      <Contact />
+      <Footer/>
     </div>
   );
 }
