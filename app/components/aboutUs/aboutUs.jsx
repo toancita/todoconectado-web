@@ -5,7 +5,7 @@ import styles from './aboutUs.module.css'
 
 export default function AboutUs() { 
   return (
-    <section className={styles.aboutUsContainer}>
+    <section id="aboutUs" className={styles.aboutUsContainer}>
       <div className={styles.leftContent}>
       <span className={styles.subtitle}>QUIÉNES SOMOS</span>
         <div className={styles.contentContainer}>
