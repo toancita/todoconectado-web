@@ -9,7 +9,7 @@ export default function Contact() {
     <section id="contact" className={styles.contactContainer}>
       <div className={styles.leftContent}>
         <p className={styles.subtitle}>CONTACTO</p>
-        <h2 className={styles.title}>Donde tus ideas se <br /><span className={styles.highlight}>conectan</span>.</h2>
+        <h2 className={styles.title}>Donde tus ideas se <br /><span className="highlight">conectan</span>.</h2>
         <div className={styles.contentContainer}>
           <p className={styles.content}> ¿Tienes un proyecto en mente o necesitas asesoría técnica? </p>
           <p className={styles.content}> Nuestro equipo está preparado para ayudarte a encontrar la solución adecuada. 

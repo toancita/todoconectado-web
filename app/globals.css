@@ -15,3 +15,35 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --color-primary: #192C78;
+  --color-primary-dark: #0E0384;
+  --color-accent: #0fffcf;
+  --color-accent-alt: #37FFDB;
+  --color-accent-hover: #00a9a4;
+  --color-secondary: #001d52;
+  --color-secondary-dark: #001a56;
+  --color-bg-light: #f1f2f6;
+  --color-bg-lighter: #f4f4f4;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray: #555;
+  --color-link: #B3C1FF;
+  --color-footer-bg: #172865;
+  --color-footer-link: #d7d7d7;
+  --color-border: #2c55ff;
+  --color-shadow: rgba(0,0,0,0.1);
+  --color-shadow-dark: rgba(0,0,0,0.3);
+  --color-overlay-1: rgba(13, 29, 89, 0.85);
+  --color-overlay-2: rgba(0, 17, 51, 0.95);
+}
+
+.highlight {
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}

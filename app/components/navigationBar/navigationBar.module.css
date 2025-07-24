@@ -1,6 +1,6 @@
 .nav {
   background-color: transparent;
-  color: white;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,7 +25,7 @@
 }
 
 .logoText {
-  color: white;
+  color: var(--color-white);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.1;
@@ -43,14 +43,14 @@
 }
 
 .link:hover {
-  color: #37FFDB;
+  color: var(--color-accent-alt);
 }
 
 .contacto {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #37FFDB;
+  color: var(--color-accent-alt);
 }
 
 .phoneIcon {
@@ -66,12 +66,12 @@
 
 .callText strong {
   font-weight: 600;
-  color: white;
+  color: var(--color-white);
 }
 
 .scrolled {
   background-color: rgba(108, 108, 108, 0.54);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px var(--color-shadow-dark);
   border-radius: 20px;
   max-width: fit-content;
   padding: 0.8rem 1.5rem;
@@ -89,6 +89,7 @@
   display: none;
   pointer-events: none;
 }
+
 .scrolled .contacto {
   display: none;
 }
@@ -108,7 +109,7 @@
   position: fixed;
   top: 0; 
   right: 0;
-  background-color: #001a56;
+  background-color: var(--color-secondary-dark);
   height: 100vh;
   width: 250px;
   padding: 1.5rem;
@@ -125,14 +126,14 @@
 }
 
 .sidebarLink {
-  color: #ffffff;
+  color: var(--color-white);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
 }
 
 .sidebarLink:hover {
-  color: #00a9a4;
+  color: var(--color-accent-hover);
 }
 
 @media (max-width: 768px) {
