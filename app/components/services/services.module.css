@@ -1,6 +1,7 @@
 .servicesContainer {
   padding: 5rem 2rem;
   background: #f9f9f9;
+  width: 100%;
 }
 
 .header {
@@ -31,7 +32,10 @@
 }
 
 .highlight {
-  color: #2c55ff;
+  color: transparent;
+  background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(32, 72, 232, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .cardContainer {
@@ -68,7 +72,7 @@
 }
 
 .icon {
-  color: #2c55ff;
+  color: #192C78;
 }
 
 .cardTitle {
@@ -85,9 +89,9 @@
 
 .cardButton {
   padding: 0.5rem 1rem;
-  border: #2c55ff solid 1px;
+  border: #192C78 solid 1px;
   background: transparent;
-  color: #2c55ff;
+  color: #192C78;
   font-weight: 500;
   border-radius: 20px;
   cursor: pointer;
@@ -95,12 +99,13 @@
 }
 
 .cardButton:hover {
-    background-color: #2c55ff;
+    background-color: #192C78;
     color: white;
 }
 
 .card:nth-child(2) .iconWrapper {
-  background: #2c55ff;
+  background: #192C78;
+  background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(32, 72, 232, 1) 100%);
 }
 
 .card:nth-child(2) {
@@ -108,19 +113,20 @@
 }
 
 .card:nth-child(2) .icon {
-    color: white;
+  color: white;
 }
 
 .card:nth-child(2) .cardButton {
-  background: #2c55ff;
+  background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(32, 72, 232, 1) 100%);  
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
+  transition: 0.5s;
+  background-size: 150% auto;
 }
 
 .card:nth-child(2) .cardButton:hover {
-  background: none;
-  color:#2c55ff;
+  background-position: right center; /* change the direction of the change here */
 }
 
 @media (max-width: 768px) {
@@ -129,5 +135,11 @@
   }
   .card {
     text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }

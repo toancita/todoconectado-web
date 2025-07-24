@@ -34,7 +34,7 @@ export default function Services() {
             </div>
 
             <div className={styles.cardContainer}>
-                {servicios.map((servicio, i) =>(
+                {servicios.map((servicio, i) => (
                     <div className={styles.card} key={i}>
                         <div className={styles.iconWrapper}>
                             <servicio.Icon className={styles.icon} size={40} />

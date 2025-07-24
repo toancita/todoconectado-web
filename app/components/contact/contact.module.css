@@ -1,0 +1,160 @@
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 6rem;
+  background: linear-gradient(190deg, #0D1D59 0%, #1D3DBF 100%);
+  flex-wrap: wrap;
+  color: white;
+}
+
+.leftContent,
+.rightContent {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.highlight {
+  color: #0fffcf;
+}
+
+.subtitle {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.subtitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #f0f0f0;
+}
+
+.contentContainer {
+  padding-top: 50px;
+}
+
+.content { 
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border-radius: 20px;
+  background: white;
+  padding: 3rem;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.formContainer label {
+  margin-top: 30px;
+}
+
+.formContainer h1 {
+  color: #192C78;
+  font-size: clamp(1.5rem, 5vw + 1rem, 3rem);
+}
+
+.formContainer input {
+  min-height: 41px;
+}
+
+.formContainer textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.formContainer input,
+.formContainer textarea {
+  border: 0px;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  width: 100%;
+  box-sizing: border-box;
+  color: #000;
+  margin-top: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.formContainer label {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.button {
+  border: solid 1px #192C78;
+  color: #192C78;
+  background-color: white;
+  border-radius: 10px;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  gap: 1rem;
+}
+.sendIcon {
+  position: absolute;
+  right: 1rem;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: white;
+  pointer-events: none;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(29, 51, 191, 1) 100%);
+  color: white;
+  padding-right: 2.5rem;
+}
+
+.button:hover .sendIcon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .leftContent,
+  .rightContent {
+    width: 100%;
+  }
+
+  .formContainer {
+    padding: 2rem;
+    width: min(100%, 600px);
+  }
+
+  .content {
+    font-size: 1.5rem;
+  }
+}
