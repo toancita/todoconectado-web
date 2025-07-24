@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Contacto</h3>
+          <h3 className="title">Contacto</h3>
           <address className={styles.address}>
               <div className={styles.contactItem}>
                   <Mail/> 

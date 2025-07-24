@@ -1,6 +1,6 @@
 .servicesContainer {
   padding: 5rem 2rem;
-  background: #f9f9f9;
+  background: var(--color-bg-lighter);
   width: 100%;
 }
 
@@ -22,14 +22,9 @@
   top: 0;
   width: 5px;
   height: 100%;
-  background: #2c55ff;
+  background: var(--color-border);
 }
 
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 1rem;
-}
 
 .highlight {
   color: transparent;
@@ -46,9 +41,9 @@
 }
 
 .card {
-  background: white;
+  background: var(--color-white);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px var(--color-shadow);
   padding: 2rem;
   max-width: 300px;
   text-align: center;
@@ -60,19 +55,19 @@
 }
 
 .iconWrapper {
-  background: white;
+  background: var(--color-white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px var(--color-shadow);
   margin-bottom: 1rem;
 }
 
 .icon {
-  color: #192C78;
+  color: var(--color-primary);
 }
 
 .cardTitle {
@@ -84,14 +79,14 @@
 .cardDescription {
   font-size: 0.95rem;
   margin-bottom: 3rem;
-  color: #555;
+  color: var(--color-gray);
 }
 
 .cardButton {
   padding: 0.5rem 1rem;
-  border: #192C78 solid 1px;
+  border: var(--color-primary) solid 1px;
   background: transparent;
-  color: #192C78;
+  color: var(--color-primary);
   font-weight: 500;
   border-radius: 20px;
   cursor: pointer;
@@ -99,8 +94,8 @@
 }
 
 .cardButton:hover {
-    background-color: #192C78;
-    color: white;
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .card:nth-child(2) .iconWrapper {
@@ -130,9 +125,6 @@
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
   .card {
     text-align: left;
   }
