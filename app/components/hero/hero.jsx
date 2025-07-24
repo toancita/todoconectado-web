@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className={styles.heroContainer}>
+    <section id="home" className={styles.heroContainer}>
       <div className={styles.overlay} />
       <Image src="/backgroundImage.webp" width={500} height={500} alt="Placeholder sorry" className={styles.heroImage}/>
 

@@ -6,7 +6,7 @@ import { Send } from 'lucide-react';
 export default function Contact() { 
 
   return (
-    <section className={styles.contactContainer}>
+    <section id="contact" className={styles.contactContainer}>
       <div className={styles.leftContent}>
         <p className={styles.subtitle}>CONTACTO</p>
         <h2 className={styles.title}>Donde tus ideas se <br /><span className="highlight">conectan</span>.</h2>
