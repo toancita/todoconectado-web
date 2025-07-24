@@ -27,7 +27,7 @@ const servicios = [
 export default function Services() {
 
     return(
-        <section className={styles.servicesContainer}>
+        <section id="services" className={styles.servicesContainer}>
             <div className={styles.header}>
                 <span className={styles.subtitle}>NUESTROS SERVICIOS</span>
                 <h2 className={styles.title}>Todo lo que tu hogar o negocio <span className={styles.highlight}>necesita</span> en un solo lugar</h2>

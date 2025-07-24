@@ -1,13 +1,12 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './contact.module.css'
 import { Send } from 'lucide-react';
 
 export default function Contact() { 
 
   return (
-    <section className={styles.contactContainer}>
+    <section id="contact" className={styles.contactContainer}>
       <div className={styles.leftContent}>
         <p className={styles.subtitle}>CONTACTO</p>
         <h2 className={styles.title}>Donde tus ideas se <br /><span className={styles.highlight}>conectan</span>.</h2>
