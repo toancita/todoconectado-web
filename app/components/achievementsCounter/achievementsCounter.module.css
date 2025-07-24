@@ -28,6 +28,11 @@
   font-weight: 700;
 }
 
+.label {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .achievementContainer {
     min-height: auto;

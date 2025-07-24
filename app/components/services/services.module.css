@@ -103,10 +103,6 @@
   background: linear-gradient(90deg, rgba(25, 44, 120, 1) 0%, rgba(32, 72, 232, 1) 100%);
 }
 
-.card:nth-child(2) {
-  grid-row: span 2;
-}
-
 .card:nth-child(2) .icon {
   color: white;
 }

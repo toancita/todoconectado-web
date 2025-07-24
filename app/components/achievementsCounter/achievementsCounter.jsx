@@ -36,7 +36,7 @@ export default function AchievementsCounter() {
               useThousandsSeparator={true}
               className={styles.animatedNumber}
               />
-              <span className="title">{achievement.title}</span>
+              <span className={styles.label}>{achievement.title}</span>
             </div>
           ))}
         </div>

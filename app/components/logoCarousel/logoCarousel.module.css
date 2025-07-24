@@ -8,3 +8,10 @@
 .logo {
   filter: brightness(0) invert(0.3);
 }
+
+.title {
+  color: #192C78;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}

@@ -26,7 +26,7 @@ const LogoCarousel = () => {
 export default function Brands() {
   return(
     <section id="clients" className={styles.brandsContainer}>
-      <h1 className="title">Confían en nosotros</h1>
+      <h1 className={styles.title}>Confían en nosotros</h1>
       <div>
         <LogoCarousel />
       </div>
