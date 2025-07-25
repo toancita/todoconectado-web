@@ -1,23 +1,40 @@
 'use client';
 
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from './achievementsCounter.module.css';
 import AnimatedNumbers from "react-animated-numbers"
 import { ACHIEVEMENTS_TEXTS } from "@/app/constants";
 
 export default function AchievementsCounter() {
-     const [animationStarted, setAnimationStarted] = useState(false);
-     useEffect(() => {
-        setAnimationStarted(true);
-    }, []);
+  const [animationStarted, setAnimationStarted] = useState(false);
+  const containerRef = useRef(null);
 
-    return (
-      <div className={styles.achievementsContainer}>
-        <div className={styles.countContainer}>
-          {ACHIEVEMENTS_TEXTS.map((achievement, i) => (
-            <div key={i} className={styles.achievement}>
-              <AnimatedNumbers
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimationStarted(true);
+        }
+      },
+      {
+        threshold: 0.3
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef} className={styles.achievementsContainer}>
+      <div className={styles.countContainer}>
+        {ACHIEVEMENTS_TEXTS.map((achievement, i) => (
+          <div key={i} className={styles.achievement}>
+            <AnimatedNumbers
               animateToNumber={animationStarted ? achievement.count : 0}
               fontStyle={{
                 fontSize: 64,
@@ -35,11 +52,11 @@ export default function AchievementsCounter() {
               })}
               useThousandsSeparator={true}
               className={styles.animatedNumber}
-              />
-              <span className={styles.label}>{achievement.title}</span>
-            </div>
-          ))}
-        </div>
+            />
+            <span className={styles.label}>{achievement.title}</span>
+          </div>
+        ))}
       </div>
-  )
+    </div>
+  );
 }
