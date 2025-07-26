@@ -58,10 +58,10 @@ export default function NavBar() {
               <X size={28} />
             </button>
           </div>
-          <a href="#servicios" className={styles.sidebarLink}>Servicios</a>
-          <a href="#nosotros" className={styles.sidebarLink}>Sobre nosotros</a>
-          <a href="#clientes" className={styles.sidebarLink}>Clientes</a>
-          <a href="#contacto" className={styles.sidebarLink}>Contacto</a>
+          <a href="#services" className={styles.sidebarLink}>Servicios</a>
+          <a href="#aboutUs" className={styles.sidebarLink}>Sobre nosotros</a>
+          <a href="#clients" className={styles.sidebarLink}>Clientes</a>
+          <a href="#contact" className={styles.sidebarLink}>Contacto</a>
         </div>
       )}
     </>
