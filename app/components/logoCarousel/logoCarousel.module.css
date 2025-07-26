@@ -1,8 +1,12 @@
 .brandsContainer {
   padding: 5rem 0;
-  background-color: white;
+  background-color: var(--color-white);
   width: 100%;
   text-align: center;
+}
+
+.logo {
+  filter: brightness(0) invert(0.3);
 }
 
 .title {
@@ -11,7 +15,3 @@
   font-size: 3rem;
   margin-bottom: 3rem;
 }
-
-.logo {
-    filter: brightness(0) invert(0.3);
-  }

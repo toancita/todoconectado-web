@@ -21,15 +21,17 @@ export default function NavBar() {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.logoContainer}>
-          <img src="/logo.svg" alt="Todo Conectado" className={styles.logoImg} />
+          <a href="#home">
+            <img src="/logo.svg" alt="Todo Conectado" className={styles.logoImg} />
+          </a>
           <span className={styles.logoText}>Todo<br />Conectado</span>
         </div>
 
         <div className={styles.desktopMenu}>
-          <Link href="#servicios" className={styles.link}>Servicios</Link>
-          <Link href="#nosotros" className={styles.link}>Sobre nosotros</Link>
-          <Link href="#clientes" className={styles.link}>Clientes</Link>
-          <Link href="#contacto" className={styles.link}>Contacto</Link>
+          <Link href="#services" className={styles.link}>Servicios</Link>
+          <Link href="#aboutUs" className={styles.link}>Sobre nosotros</Link>
+          <Link href="#clients" className={styles.link}>Clientes</Link>
+          <Link href="#contact" className={styles.link}>Contacto</Link>
         </div>
 
         <div className={styles.contacto}>
@@ -56,10 +58,10 @@ export default function NavBar() {
               <X size={28} />
             </button>
           </div>
-          <a href="#servicios" className={styles.sidebarLink}>Servicios</a>
-          <a href="#nosotros" className={styles.sidebarLink}>Sobre nosotros</a>
-          <a href="#clientes" className={styles.sidebarLink}>Clientes</a>
-          <a href="#contacto" className={styles.sidebarLink}>Contacto</a>
+          <a href="#services" className={styles.sidebarLink}>Servicios</a>
+          <a href="#aboutUs" className={styles.sidebarLink}>Sobre nosotros</a>
+          <a href="#clients" className={styles.sidebarLink}>Clientes</a>
+          <a href="#contact" className={styles.sidebarLink}>Contacto</a>
         </div>
       )}
     </>

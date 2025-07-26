@@ -4,13 +4,13 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #001d52;
+  background-color: var(--color-secondary);
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(13, 29, 89, 0.85), rgba(0, 17, 51, 0.95));
+  background: linear-gradient(to bottom, var(--color-overlay-1), var(--color-overlay-2));
   z-index: 1;
 }
 
@@ -31,14 +31,14 @@
 .locationContent {
   display: inline-flex;
   align-items: center;
-  background-color: #f1f2f6;
+  background-color: var(--color-bg-light);
   border-radius: 20px;
   padding: 0.4rem 0.8rem;
   margin-bottom: 3rem;
-  color: #1e1e1e;
+  color: var(--color-black);
   font-weight: 500;
   font-size: 0.9rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px var(--color-shadow);
 }
 
 .mapPin {
@@ -46,7 +46,7 @@
   height: 1rem;
   margin-right: 0.5rem;
   padding: 0.1rem;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 20px;
   animation: pulse 2s infinite;
 }
@@ -58,10 +58,6 @@
   margin-bottom: 1rem;
 }
 
-.highlight {
-  color: #0fffcf;
-}
-
 .heroDescription {
   font-size: 1.125rem;
   line-height: 1.6;
@@ -71,8 +67,8 @@
 
 .cotizarBtn {
   background: transparent;
-  border: 2px solid #0fffcf;
-  color: #0fffcf;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   padding: 1rem;
   font-size: 1rem;
   border-radius: 20px;
@@ -81,8 +77,8 @@
 }
 
 .cotizarBtn:hover {
-  background-color: #0fffcf;
-  color: #001d52;
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
 }
 
 .chevronDown {
