@@ -3,7 +3,7 @@
 import styles from './services.module.css'
 import { SERVICES_TEXTS } from "@/app/constants";
 
-export default function Services() {
+export default function ServicesComponent() {
   return(
     <section id="services" className={styles.servicesContainer}>
       <div className={styles.header}>
@@ -15,16 +15,16 @@ export default function Services() {
         {SERVICES_TEXTS.map((servicio, i) => (
             <div className={styles.card} key={i}>
               <div className={styles.iconWrapper}>
-                  <servicio.Icon className={styles.icon} size={40} />
+                <servicio.Icon className={styles.icon} size={40} />
               </div>
               <h3 className={styles.cardTitle}>{servicio.title}</h3>
               <p className={styles.cardDescription}>{servicio.description}</p>
               <button className={styles.cardButton}>
-                  {servicio.button}
+                {servicio.button}
               </button>
           </div>
         ))}
       </div>         
-  </section>
-);
+    </section>
+  );
 }
