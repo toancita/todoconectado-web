@@ -65,6 +65,12 @@
   font-size: 0.8rem;
 }
 
+.title { 
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 600px) {
   .footerContainer {
     grid-template-columns: 1fr;
