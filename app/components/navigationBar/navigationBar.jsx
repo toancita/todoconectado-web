@@ -38,7 +38,7 @@ export default function NavBar() {
           <Phone className={styles.phoneIcon} size={20} />
           <div className={styles.callText}>
             <strong>Llámanos</strong>
-            <span>990723180</span>
+            <span>9 93780684</span>
           </div>
         </div>
 
