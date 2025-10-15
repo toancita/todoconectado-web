@@ -8,7 +8,7 @@ export default function ServicesComponent() {
     <section id="services" className={styles.servicesContainer}>
       <div className={styles.header}>
         <span className={styles.subtitle}>NUESTROS SERVICIOS</span>
-        <h2 className={styles.title}>Todo lo que tu hogar o negocio <span className={styles.highlight}>necesita</span> en un solo lugar</h2>
+        <h2 className="title">Todo lo que tu hogar o negocio <span className={styles.highlight}>necesita</span> en un solo lugar</h2>
       </div>
 
       <div className={styles.cardContainer}>

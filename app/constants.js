@@ -27,7 +27,7 @@ export const ACHIEVEMENTS_TEXTS = [
     count: 70
   },
   {
-    title: 'Clientes felices',
+    title: 'Clientes satisfechos',
     count: 50
   },
   {

@@ -15,6 +15,10 @@
   flex-direction: column;
 }
 
+.sectionTitle {
+  padding-bottom: 16px;
+}
+
 .description {
   font-weight: 700;
   padding: 1rem 0;
