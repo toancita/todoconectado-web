@@ -1,9 +1,10 @@
 .aboutUsContainer {
   display: flex;
-  padding: clamp(2rem, 5vw, 6rem);
+  padding: 3rem;
   background: linear-gradient(90deg, var(--color-primary) 0%, #3f519d 100%);
   color: var(--color-white);
-  height: 110vh;
+  min-height: 100vh;
+  height: auto;
 }
 
 .leftContent {
@@ -16,12 +17,15 @@
   display: flex;
   flex: 1;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
 @media (max-width: 1084px) {
   .aboutUsContainer {
     align-items: center;
+    padding: 2rem;
+    flex-direction: column;
   }
   .image {
     display: none;
@@ -30,7 +34,6 @@
     flex: 0;
   }
 }
-
 @media (max-width: 420px) {
   .aboutUsContainer {
     display: block;
@@ -68,21 +71,5 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   align-self: center;
-}
-
-.button { 
- border: solid 1px;
- border-color: var(--color-accent-alt);
- border-radius: 20px;
- color: var(--color-accent-alt);
- max-width: 200px;
- text-align: center;
- padding: 10px;
- transition: all 0.3s ease-in-out;
- margin-top: 1rem;
-}
-
-.button:hover {
-  background-color: var(--color-accent-alt);
-  color: var(--color-primary);
+  line-height: 1.4;
 }
