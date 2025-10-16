@@ -7,7 +7,7 @@ export default function AboutUs() {
   return (
     <section id="aboutUs" className={styles.aboutUsContainer}>
       <div className={styles.leftContent}>
-      <span className={styles.subtitle}>QUIÉNES SOMOS</span>
+        <span className={styles.subtitle}>QUIÉNES SOMOS</span>
         <div className={styles.contentContainer}>
           <h2 className="title">Comprometidos con la tecnología, <span className="highlight">conectados</span> contigo</h2>
           <p className={styles.content}> En Todo Conectado transformamos ideas en soluciones. Somos una empresa apasionada por la tecnología,
