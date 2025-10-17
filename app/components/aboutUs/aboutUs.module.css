@@ -1,27 +1,34 @@
 .aboutUsContainer {
   display: flex;
-  padding: clamp(2rem, 5vw, 6rem);
+  padding: 3rem;
   background: linear-gradient(90deg, var(--color-primary) 0%, #3f519d 100%);
   color: var(--color-white);
-  height: 110vh;
+  min-height: 90vh;
+  height: auto;
 }
 
 .leftContent {
   display: flex;
   flex: 1;
   flex-direction: column;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .rightContent {
   display: flex;
   flex: 1;
   justify-content: center;
+  align-items: center;
   padding: 2rem;
 }
 
 @media (max-width: 1084px) {
   .aboutUsContainer {
     align-items: center;
+    padding: 2rem;
+    flex-direction: column;
   }
   .image {
     display: none;
@@ -30,13 +37,11 @@
     flex: 0;
   }
 }
-
 @media (max-width: 420px) {
   .aboutUsContainer {
     display: block;
   }
 }
-
 
 .contentContainer {
   display: flex;
@@ -44,6 +49,8 @@
   justify-content: center;
   height: 100%;
   gap: 30px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .subtitle {
@@ -66,24 +73,67 @@
 .content { 
   font-size: 1.5rem;
   font-weight: lighter;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   align-self: center;
+  line-height: 1.4;
 }
 
-.button { 
- border: solid 1px;
- border-color: var(--color-accent-alt);
- border-radius: 20px;
- color: var(--color-accent-alt);
- max-width: 200px;
- text-align: center;
- padding: 10px;
- transition: all 0.3s ease-in-out;
- margin-top: 1rem;
+@media (max-width: 1084px) {
+  .aboutUsContainer {
+    align-items: center;
+    min-height: 700px;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .title {
+    font-size: 0.5rem;
+  }
+  .image {
+    display: none;
+  }
+  .rightContent {
+    display: none;
+  }
+  .contentContainer {
+    padding: 1rem;
+    gap: 20px;
+  }
+  .content {
+    font-size: 1.3rem;
+  }
 }
 
-.button:hover {
-  background-color: var(--color-accent-alt);
-  color: var(--color-primary);
+@media (max-width: 420px) {
+  .aboutUsContainer {
+    display: block;
+    min-height: 800px;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .leftContent {
+    padding: 0;
+    height: 100%;
+  }
+  .contentContainer {
+    padding: 0;
+    gap: 15px;
+    height: 100%;
+  }
+  .content {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 0;
+    line-height: 1.4;
+  }
+  .button {
+    margin: 1rem auto;
+    max-width: 180px;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .subtitle {
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
+  }
 }

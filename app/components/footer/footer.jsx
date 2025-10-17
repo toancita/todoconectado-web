@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.section}>
-          <h3 className="title">Contacto</h3>
+          <h3 className={styles.sectionTitle}>Contacto</h3>
           <address className={styles.address}>
               <div className={styles.contactItem}>
                   <Mail/> 
@@ -39,11 +39,11 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                   <Phone/> 
-                  <p>+56 9 9072 3180</p>
+                  <p>+56 9 9378 0684</p>
               </div>
               <div className={styles.contactItem}>
                   <MapPin/>
-                  <p>Arica, Chile. Lomas del miramar 040</p>
+                  <p>Arica, Chile. Panamericana Norte 3699</p>
               </div>
           </address>
         </div>
@@ -52,10 +52,10 @@ export default function Footer() {
       <div className={styles.copyrightContainer}>
           <p>© {new Date().getFullYear()} Todo Conectado.</p>
           
-          <div className={styles.legalLinks}>
-          <Link href="/privacidad" className={styles.legalLink}>Política de Privacidad</Link>
-          <Link href="/terminos" className={styles.legalLink}>Términos y Condiciones</Link>
-          </div>
+          {/* <div className={styles.legalLinks}>
+            <Link href="/privacidad" className={styles.legalLink}>Política de Privacidad</Link>
+            <Link href="/terminos" className={styles.legalLink}>Términos y Condiciones</Link>
+          </div> */}
       </div>
     </footer>
   )

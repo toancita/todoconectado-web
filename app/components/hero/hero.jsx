@@ -15,7 +15,7 @@ export default function Hero() {
           <MapPin className={styles.mapPin} />
           <span>Servicio en toda la región de Arica y Parinacota</span>
         </div>
-        <h2 className="title">Tecnología que protege, <br/> 
+        <h2 className={styles.titleText}>Tecnología que protege, <br/> 
         conecta y <span className="highlight">transforma</span>
         </h2>
         <p className={styles.heroDescription}>

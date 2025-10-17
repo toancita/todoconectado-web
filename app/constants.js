@@ -5,7 +5,7 @@ export const SERVICES_TEXTS = [
     title: 'Seguridad avanzada',
     description: 'Soluciones todo-en-uno para hogares y empresas. Más seguridad, menos estrés.',
     Icon: Shield,
-    button: 'Soluciones a medida →'
+    button: 'Saber más →'
   },
   {
     title: 'Software a medida',
@@ -27,7 +27,7 @@ export const ACHIEVEMENTS_TEXTS = [
     count: 70
   },
   {
-    title: 'Clientes felices',
+    title: 'Clientes satisfechos',
     count: 50
   },
   {
@@ -37,8 +37,13 @@ export const ACHIEVEMENTS_TEXTS = [
 ]
 
 export const CLIENTS_LOGOS_SVGS = [
-  { src: '/slider/logo1.svg', alt: 'any alt' },
-  { src: '/slider/logo2.svg', alt: 'any alt' },
-  { src: '/slider/logo3.svg', alt: 'any alt' },
-  { src: '/slider/logo4.svg', alt: 'any alt' },
+  { src: '/slider/logo1.webp', alt: 'dahua' },
+  { src: '/slider/logo2.webp', alt: 'hikvision' },
+  { src: '/slider/logo3.webp', alt: 'ika' },
+  { src: '/slider/logo4.webp', alt: 'edwards' },
+  { src: '/slider/logo5.webp', alt: 'rossi' },
+  { src: '/slider/logo6.webp', alt: 'faac' },
+  { src: '/slider/logo7.webp', alt: 'velotti' },
+  { src: '/slider/logo8.svg', alt: 'bft' },
+  { src: '/slider/logo9.svg', alt: 'hagroy' },
 ]

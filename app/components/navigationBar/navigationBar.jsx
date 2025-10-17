@@ -21,7 +21,7 @@ export default function NavBar() {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles.logoContainer}>
-          <a href="#home">
+          <a href=".">
             <img src="/logo.svg" alt="Todo Conectado" className={styles.logoImg} />
           </a>
           <span className={styles.logoText}>Todo<br />Conectado</span>
@@ -38,7 +38,7 @@ export default function NavBar() {
           <Phone className={styles.phoneIcon} size={20} />
           <div className={styles.callText}>
             <strong>Llámanos</strong>
-            <span>990723180</span>
+            <span>993780684</span>
           </div>
         </div>
 

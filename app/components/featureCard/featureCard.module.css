@@ -1,0 +1,35 @@
+.featContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.featCard {
+  flex: 1;
+  text-align: center; /* Cambia a center para alinear el texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  border: solid 1px #c4c4c4;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.icon {
+  width: 32px;
+  margin-bottom: 0.5rem;
+  color: #5D5D5D;
+}
+
+.featCard h3 {
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.featCard p {
+  font-size: .9rem;
+  color: #555;
+}

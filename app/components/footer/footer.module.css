@@ -13,6 +13,11 @@
 .section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 26px;
+}
+
+.sectionTitle {
+  padding-bottom: 16px;
 }
 
 .description {
@@ -63,6 +68,12 @@
   color: var(--color-link);
   text-decoration: none;
   font-size: 0.8rem;
+}
+
+.title { 
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {

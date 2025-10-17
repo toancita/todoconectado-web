@@ -2,29 +2,36 @@
 
 import styles from './services.module.css'
 import { SERVICES_TEXTS } from "@/app/constants";
+import { useRouter } from 'next/navigation';
 
-export default function Services() {
+export default function ServicesComponent() {
+  const router = useRouter();
+
   return(
     <section id="services" className={styles.servicesContainer}>
       <div className={styles.header}>
         <span className={styles.subtitle}>NUESTROS SERVICIOS</span>
-        <h2 className={styles.title}>Todo lo que tu hogar o negocio <span className={styles.highlight}>necesita</span> en un solo lugar</h2>
+        <h2 className="title">Todo lo que tu hogar o negocio <span className={styles.highlight}>necesita</span> en un solo lugar</h2>
       </div>
 
       <div className={styles.cardContainer}>
         {SERVICES_TEXTS.map((servicio, i) => (
             <div className={styles.card} key={i}>
               <div className={styles.iconWrapper}>
-                  <servicio.Icon className={styles.icon} size={40} />
+                <servicio.Icon className={styles.icon} size={40} />
               </div>
-              <h3 className={styles.cardTitle}>{servicio.title}</h3>
-              <p className={styles.cardDescription}>{servicio.description}</p>
-              <button className={styles.cardButton}>
+              <div className={styles.dataContainer}>
+                <h3 className={styles.cardTitle}>{servicio.title}</h3>
+                <div className={styles.cardDescriptionContainer}>
+                  <p className={styles.cardDescription}>{servicio.description}</p>
+                </div>
+                <button className={styles.cardButton} onClick={() => router.push('/services')}>
                   {servicio.button}
-              </button>
+                </button>
+              </div>
           </div>
         ))}
       </div>         
-  </section>
-);
+    </section>
+  );
 }

@@ -7,6 +7,7 @@
 
 .logo {
   filter: brightness(0) invert(0.3);
+  width: 120px;
 }
 
 .title {
