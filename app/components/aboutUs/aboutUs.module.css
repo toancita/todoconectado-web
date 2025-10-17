@@ -3,7 +3,7 @@
   padding: 3rem;
   background: linear-gradient(90deg, var(--color-primary) 0%, #3f519d 100%);
   color: var(--color-white);
-  min-height: 100vh;
+  min-height: 90vh;
   height: auto;
 }
 

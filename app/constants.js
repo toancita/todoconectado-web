@@ -5,7 +5,7 @@ export const SERVICES_TEXTS = [
     title: 'Seguridad avanzada',
     description: 'Soluciones todo-en-uno para hogares y empresas. Más seguridad, menos estrés.',
     Icon: Shield,
-    button: 'Soluciones a medida →'
+    button: 'Saber más →'
   },
   {
     title: 'Software a medida',
