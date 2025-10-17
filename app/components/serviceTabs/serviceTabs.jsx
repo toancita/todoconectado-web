@@ -36,7 +36,7 @@ const data = {
           "Alarmas audibles y visuales",
           "Mantenimiento preventivo"
         ],
-        image: "/images/iluminacion.jpg"
+        image: "/serviceTabs/red2.webp"
       }
     ]
   },
@@ -45,10 +45,11 @@ const data = {
       {
         title: "Portones eléctricos",
         content: [
-          "Cámaras IP 4K",
-          "Almacenamiento nube/local"
+          "Motores silenciosos y de bajo consumo",
+          "Control mediante app y control remoto",
+          "Sensores de seguridad reversibles"
         ],
-        image: "/images/vigilancia.jpg"
+        image: "/serviceTabs/porton.webp"
       },
       {
         title: "Climatización inteligente",
@@ -58,7 +59,7 @@ const data = {
           "Monitoreo de consumo energético",
           "Integración con asistentes virtuales"
         ],
-        image: "/images/vigilancia.jpg"
+        image: "/serviceTabs/aire.webp"
       },
       {
         title: "Iluminación automatizada",
@@ -67,7 +68,7 @@ const data = {
           "Programación de horarios y sensores",
           "Control de consumo energético"
         ],
-        image: "/images/vigilancia.jpg"
+        image: "/serviceTabs/iluminacion.webp"
       }
     ]
   },
@@ -81,15 +82,17 @@ const data = {
           "Integración con APIs y servicios cloud",
           "Mantenimiento y actualizaciones"
         ],
-        image: "/images/cortina.jpg"
+        image: "/serviceTabs/app1.webp"
       },
       {
         title: "Desarrollo de páginas web",
         content: [
-          "Bombillas LED controlables por voz",
-          "Escenas preprogramadas"
+          "Diseño profesional y adaptable",
+          "Optimización para motores de búsqueda",
+          "Catálogo de productos gestionable",
+          "Diseño responsive y moderno"
         ],
-        image: "/images/iluminacion.jpg"
+        image: "/serviceTabs/app2.webp"
       }
     ]
   }
