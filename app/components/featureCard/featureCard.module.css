@@ -1,6 +1,6 @@
 .featContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2rem;
   padding: 2rem;
   margin-bottom: 3rem;
@@ -8,7 +8,14 @@
 
 .featCard {
   flex: 1;
-  text-align: left;
+  text-align: center; /* Cambia a center para alinear el texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  border: solid 1px #c4c4c4;
+  border-radius: 15px;
+  padding: 1rem;
 }
 
 .icon {

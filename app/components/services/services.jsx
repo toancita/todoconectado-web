@@ -2,8 +2,11 @@
 
 import styles from './services.module.css'
 import { SERVICES_TEXTS } from "@/app/constants";
+import { useRouter } from 'next/navigation';
 
 export default function ServicesComponent() {
+  const router = useRouter();
+
   return(
     <section id="services" className={styles.servicesContainer}>
       <div className={styles.header}>
@@ -22,7 +25,7 @@ export default function ServicesComponent() {
                 <div className={styles.cardDescriptionContainer}>
                   <p className={styles.cardDescription}>{servicio.description}</p>
                 </div>
-                <button className={styles.cardButton}>
+                <button className={styles.cardButton} onClick={() => router.push('/services')}>
                   {servicio.button}
                 </button>
               </div>
