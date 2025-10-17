@@ -13,6 +13,11 @@
 .section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 26px;
+}
+
+.sectionTitle {
+  padding-bottom: 16px;
 }
 
 .description {

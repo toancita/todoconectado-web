@@ -33,17 +33,28 @@
 
 .desktopMenu {
   display: flex;
-  gap: 0.2rem;
+  gap: 3rem;
   text-align: center;
 }
 
 .link {
-  transition: 0.3s ease-in-out;
-  padding: 0.2rem 1rem;
+  text-decoration: none;
+  position: relative;
 }
 
-.link:hover {
-  color: var(--color-accent-alt);
+.link::after {
+  transition: width 0.3s ease;
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .contacto {
