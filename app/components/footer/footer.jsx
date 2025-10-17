@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
               <div className={styles.contactItem}>
                   <Phone/> 
-                  <p>+56 9 9072 3180</p>
+                  <p>+56 9 9378 0684</p>
               </div>
               <div className={styles.contactItem}>
                   <MapPin/>
