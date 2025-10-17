@@ -3,7 +3,7 @@
   flex-direction: row;
   gap: 3rem;
   padding: 6rem;
-  background: linear-gradient(190deg, #0D1D59 0%, var(--color-primary) 100%);
+  background: var(--color-footer-bg);
   flex-wrap: wrap;
   color: var(--color-white);
 }
@@ -19,6 +19,7 @@
   padding-left: 1rem;
   font-size: 1rem;
   letter-spacing: 1px;
+  margin-bottom: 24px;
 }
 
 .subtitle::before {

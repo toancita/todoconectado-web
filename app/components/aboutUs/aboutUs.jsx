@@ -14,9 +14,7 @@ export default function AboutUs() {
             enfocada en brindar servicios personalizados que simplifican procesos y mejoran la calidad de vida.
             Trabajamos para convertirnos en un aliado confiable en el camino hacia la transformación digital.
           </p>
-          <a className={styles.button} href='#servicios'>
-            Conoce más
-          </a>
+
         </div>
       </div>
       <div className={styles.rightContent}>

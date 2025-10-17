@@ -9,7 +9,7 @@ const LogoCarousel = () => {
   return (
     <Slider
       width="250px"
-      duration={20}
+      duration={35}
       pauseOnHover={true}
       blurBorders={false}
       blurBorderColor={'#fff'}
@@ -23,10 +23,10 @@ const LogoCarousel = () => {
   );
 }              
 
-export default function Brands() {
+export default function Brands({ showTitle = true }) {
   return(
     <section id="clients" className={styles.brandsContainer}>
-      <h1 className={styles.title}>Confían en nosotros</h1>
+       {showTitle && <h1 className={styles.title}>Colaboradores</h1>}
       <div>
         <LogoCarousel />
       </div>
