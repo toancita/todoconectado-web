@@ -176,3 +176,148 @@
 .sidebar {
   transition: opacity 0.3s ease;
 }
+
+.desktopVersion {
+  display: block;
+}
+
+
+.mobileVersion {
+  display: none;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.accordionItem {
+  border: 1px solid #E0E6ED;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  background: #f1f5f9;
+}
+
+.accordionActive {
+  background: #e0f2fe;
+  border-bottom: 1px solid #E0E6ED;
+}
+
+.accordionIcon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1A56DB;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: white;
+}
+
+.accordionContentOpen {
+  max-height: 2000px; 
+}
+
+.accordionSubItem {
+  padding: 24px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.accordionSubItem:last-child {
+  border-bottom: none;
+}
+
+.accordionSubItem h4 {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.accordionSubItem img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.accordionSubItem ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordionSubItem li {
+  font-size: 14px;
+  color: #475569;
+  position: relative;
+  padding-left: 24px;
+}
+
+.accordionSubItem li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 4px;
+  border: 2px solid #1A56DB;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .desktopVersion {
+    display: none;
+  }
+  
+  .mobileVersion {
+    display: block;
+  }
+  
+  .wrapper {
+    padding: 20px;
+    margin: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 16px;
+    margin: 20px 10px;
+  }
+  
+  .accordionHeader {
+    padding: 14px 16px;
+    font-size: 15px;
+  }
+  
+  .accordionSubItem {
+    padding: 20px 16px;
+  }
+}

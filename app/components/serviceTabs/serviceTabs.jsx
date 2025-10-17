@@ -101,6 +101,21 @@ const data = {
 export default function ServiceTabs() {
   const [activeTab, setActiveTab] = useState("Hogar inteligente");
   const [activeSub, setActiveSub] = useState(0);
+  const [expandedItems, setExpandedItems] = useState({});
+
+  const initialExpandedState = {};
+  tabs.forEach(tab => {
+    initialExpandedState[tab] = tab === activeTab;
+  });
+
+  const [expandedItemsState, setExpandedItemsState] = useState(initialExpandedState);
+
+  const toggleAccordion = (tab) => {
+  setExpandedItemsState(prev => ({
+    ...prev,
+    [tab]: !prev[tab]
+  }));
+  };
 
   const subs = data[activeTab].subs;
 
@@ -112,7 +127,8 @@ export default function ServiceTabs() {
         <h1 className='title'>Tecnología con <span className={styles.highlight}>propósito</span></h1>
       </div>
 
-    <div className={styles.wrapper}>
+    <div className={styles.desktopVersion}>
+      <div className={styles.wrapper}>
       <div className={styles.tabs}>
         {tabs.map(tab => (
           <button
@@ -150,6 +166,39 @@ export default function ServiceTabs() {
         </div>
       </div>
     </div>
+    </div>
+
+    <div className={styles.mobileVersion}>
+      <div className={styles.accordion}>
+        {tabs.map(tab => (
+          <div key={tab} className={styles.accordionItem}>
+            <button 
+              className={`${styles.accordionHeader} ${expandedItemsState[tab] ? styles.accordionActive : ''}`}
+              onClick={() => toggleAccordion(tab)}
+            >
+              {tab}
+              <span className={styles.accordionIcon}>
+                {expandedItemsState[tab] ? '−' : '+'}
+              </span>
+            </button>
+            
+            <div className={`${styles.accordionContent} ${expandedItemsState[tab] ? styles.accordionContentOpen : ''}`}>
+              {data[tab].subs.map((sub, index) => (
+                <div key={sub.title} className={styles.accordionSubItem}>
+                  <h4>{sub.title}</h4>
+                  <img src={sub.image} alt={sub.title} />
+                  <ul>
+                    {sub.content.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div> 
     </section>
   );
 }
