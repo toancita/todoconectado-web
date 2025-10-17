@@ -23,7 +23,7 @@ const LogoCarousel = () => {
   );
 }              
 
-export default function Brands() {
+export default function Brands({ showTitle = true }) {
   return(
     <section id="clients" className={styles.brandsContainer}>
       <div>
