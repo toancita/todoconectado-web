@@ -21,7 +21,7 @@ export default function Services() {
         showOverlay={false}
         centerContent={true}
       />
-      <LogoCarousel />
+      <LogoCarousel showTitle={false} />
       <FeatureCard />
       <ServiceTabs />
       <h2 className="centerTxt">Los números hablan por sí solos</h2>
