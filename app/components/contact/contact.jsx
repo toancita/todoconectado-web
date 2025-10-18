@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import styles from './contact.module.css'
 import { Send } from 'lucide-react';
-import { sendEmail } from '@/app/api/resend';
 
 export default function Contact() { 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -19,17 +18,24 @@ export default function Contact() {
     setStatus('Enviando...');
 
     try {
-      const response = await sendEmail({
-        from: formData.email,
-        name: formData.name,
-        message: formData.message
+      const response = await fetch('/api/resend', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: formData.email,
+          name: formData.name,
+          message: formData.message,
+        }),
       });
 
-      if (response.data && response.data.id) {
-        console.log('response 2', reponse)
+      if (response.ok) {
+        const data = await response.json();
         setStatus('¡Correo enviado exitosamente!');
         setFormData({ name: '', email: '', message: '' });
       } else {
+        const errorData = await response.json();
         setStatus('Hubo un error. Intenta nuevamente.');
       }
     } catch (error) {
