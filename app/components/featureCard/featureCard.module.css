@@ -8,11 +8,11 @@
 
 .featCard {
   flex: 1;
-  text-align: center; /* Cambia a center para alinear el texto */
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
+  justify-content: center;
+  align-items: center;
   border: solid 1px #c4c4c4;
   border-radius: 15px;
   padding: 1rem;
