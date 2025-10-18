@@ -36,7 +36,7 @@ export default function Hero({
       {showBackgroundImage && (
         <Image src={backgroundImage} width={500} height={500} alt="Placeholder sorry" className={heroImageClass} />
       )}
-  <div className={centerContent ? `${styles.heroContent} ${styles.centeredContent}` : styles.heroContent}>
+      <div className={centerContent ? `${styles.heroContent} ${styles.centeredContent}` : styles.heroContent}>
         {showLocationContent && (
           <div className={styles.locationContent}>
             <MapPin className={styles.mapPin} />
@@ -46,10 +46,11 @@ export default function Hero({
         <h2 className={styles.titleText}>{title}</h2>
         <p className={styles.heroDescription}>{description}</p>
         {showCotizarBtn && (
-          <button className={styles.cotizarBtn}>Cotiza ahora</button>
+          <a href="#contact" className={styles.cotizarBtn}>
+            Cotiza ahora
+          </a>
         )}
       </div>
-
       <div className={styles.chevronDown}>
         <ChevronDown className={styles.ChevronDown} />
       </div>
