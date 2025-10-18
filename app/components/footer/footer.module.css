@@ -6,8 +6,9 @@
 }
 
 .footerContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .section {
@@ -78,7 +79,7 @@
 
 @media (max-width: 600px) {
   .footerContainer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
     align-items: center;
   }

@@ -15,10 +15,10 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'Formulario de Contacto <no-reply@todoconectado.cl>',
+      from: 'Formulario de Contacto <formulario-web@todoconectado.cl>',
       to: 'contacto@todoconectado.cl',
       subject: `Nueva solicitud de ${name}`,
-      react: EmailTemplate({ name, message }),
+      react: EmailTemplate({ name, message, from }),
     });
 
     return new Response(

@@ -3,7 +3,6 @@
 import React from "react";
 import { Mail, Phone, MapPin } from 'lucide-react'
 import styles from './footer.module.css'
-import Link from 'next/link';
 import Image from "next/image";
 
 export default function Footer() {
@@ -19,15 +18,6 @@ export default function Footer() {
             className={styles.logo}
             />
             <p className={styles.description}>Tecnología que protege, conecta y transforma.</p>
-        </div>
-
-        <div className={styles.section}>
-            <h3 className={styles.sectionTitle}>Enlaces</h3>
-            <ul className={styles.linksList}>
-                <li><Link href="/servicios" className={styles.link}>Servicios</Link></li>
-                <li><Link href="/nosotros" className={styles.link}>Nosotros</Link></li>
-                <li><Link href="/contacto" className={styles.link}>Contacto</Link></li>
-            </ul>
         </div>
 
         <div className={styles.section}>
