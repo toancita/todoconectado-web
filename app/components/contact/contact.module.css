@@ -52,6 +52,7 @@
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .formContainer label {
@@ -68,8 +69,15 @@
 }
 
 .formContainer textarea {
+  display: flex;
+  justify-content: center;
   min-height: 130px;
   resize: none;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
 }
 
 .formContainer input,
@@ -91,30 +99,32 @@
 }
 
 .button {
+  display: flex;
+  justify-content: center;
   border: solid 1px var(--color-primary);
   color: var(--color-primary);
   background-color: var(--color-white);
   border-radius: 10px;
-  align-self: center;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   font-size: 1.5rem;
-  position: relative;
   overflow: hidden;
-  display: inline-flex;
-  align-items: center;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   gap: 1rem;
+  align-self: center;
 }
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .sendIcon {
-  position: absolute;
-  right: 1rem;
-  opacity: 0;
-  transform: translateX(10px);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  color: white;
-  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Transición suave para el movimiento */
 }
 
 .button:hover {
@@ -125,7 +135,7 @@
 
 .button:hover .sendIcon {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(20px);
 }
 
 @media (max-width: 768px) {

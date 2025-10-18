@@ -1,9 +1,48 @@
 'use client';
 
+import { useState } from 'react';
 import styles from './contact.module.css'
 import { Send } from 'lucide-react';
 
 export default function Contact() { 
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Enviando...');
+
+    try {
+      const response = await fetch('/api/resend', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: formData.email,
+          name: formData.name,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setStatus('¡Correo enviado exitosamente!');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        const errorData = await response.json().catch(() => null);
+        // console.error('Error en la respuesta:', errorData);
+        setStatus(errorData?.message || 'Hubo un error. Intenta nuevamente.');
+      }
+    } catch (error) {
+      setStatus('Error al enviar.');
+    }
+  };
 
   return (
     <section id="contact" className={styles.contactContainer}>
@@ -22,19 +61,43 @@ export default function Contact() {
       <div className={styles.rightContent}>
         <div className={styles.formContainer}>
           <h1 className={styles.title}>Cuéntanos sobre ti</h1>
+          <form onSubmit={handleSubmit}>
             <label>Nombre</label>
-            <input type="text" placeholder='Tu nombre completo' />
+            <input
+              type="text"
+              name="name"
+              placeholder="Tu nombre completo"
+              value={formData.name}
+              onChange={handleChange}
+            />
 
             <label>Email</label>
-            <input type="text" placeholder='Tu correo personal o corporativo' />
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu correo personal o corporativo"
+              value={formData.email}
+              onChange={handleChange}
+            />
 
             <label>Cómo podemos ayudarte</label>
-            <textarea placeholder='Cuéntanos en qué te podemos ayudar'></textarea>
+            <textarea
+              name="message"
+              placeholder="Cuéntanos en qué te podemos ayudar"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
 
-            <button className={styles.button}>
-              <span className={styles.buttonText}>Enviar</span>
-              <Send className={styles.sendIcon} />
-            </button>
+            <div className={styles.buttonContainer}>
+              <button type="submit" className={styles.button}>
+                <span className={styles.buttonText}>Enviar</span>
+                <div className={styles.sendIcon}>
+                  <Send />
+                </div>
+              </button>
+            </div>
+          </form>
+          {status && <p className={styles.status}>{status}</p>}
         </div>
       </div>
     </section>

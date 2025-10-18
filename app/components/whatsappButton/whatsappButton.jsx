@@ -2,7 +2,7 @@ import styles from './whatsappButton.module.css';
 import Image from 'next/image';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '56990723180';
+  const phoneNumber = '993780684';
 
   return (
     <a
