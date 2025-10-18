@@ -35,8 +35,9 @@ export default function Contact() {
         setStatus('¡Correo enviado exitosamente!');
         setFormData({ name: '', email: '', message: '' });
       } else {
-        const errorData = await response.json();
-        setStatus('Hubo un error. Intenta nuevamente.');
+        const errorData = await response.json().catch(() => null);
+        // console.error('Error en la respuesta:', errorData);
+        setStatus(errorData?.message || 'Hubo un error. Intenta nuevamente.');
       }
     } catch (error) {
       setStatus('Error al enviar.');

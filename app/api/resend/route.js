@@ -15,14 +15,15 @@ export async function POST(req) {
     }
 
     const data = await resend.emails.send({
-      from: 'Formulario de Contacto <form@todoconectado.cl>',
+      from: 'Formulario de Contacto <no-reply@todoconectado.cl>',
       to: 'contacto@todoconectado.cl',
       subject: `Nueva solicitud de ${name}`,
       react: EmailTemplate({ name, message }),
     });
 
     return new Response(
-      { status: 200 }
+      JSON.stringify({ message: 'Correo enviado exitosamente', data }),
+      { status: 200, headers: { 'Content-Type': 'application/json' } }
     );
   } catch (error) {
     console.error('Error al enviar el correo:', error);
