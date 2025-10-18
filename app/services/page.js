@@ -11,7 +11,16 @@ export default function Services() {
   return (
     <div>
       <NavBar />
-      <Hero />
+      <Hero
+        title={<>Soluciones Integrales para <br />Hogares y Negocios</>}
+        description="Desde hogares inteligentes hasta seguridad empresarial — diseñamos, instalamos y mantenemos sistemas integrados."
+        showCotizarBtn={false}
+        showBackgroundImage={false}
+        showLocationContent={false}
+        customGradient="radial-gradient(circle at 50% 50%, #192C78 30%, #2048E8 100%)"
+        showOverlay={false}
+        centerContent={true}
+      />
       <LogoCarousel />
       <FeatureCard />
       <ServiceTabs />
