@@ -53,13 +53,12 @@
   transition: transform 0.3s;
 }
 
-/* Ajuste para que la descripción esté en el medio entre el título y el botón */
 .dataContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Distribuye los elementos equitativamente */
-  height: 100%; /* Asegura que ocupe todo el espacio disponible */
+  justify-content: space-between; 
+  height: 100%; 
 }
 
 .card:hover {
@@ -73,10 +72,17 @@
   margin: 0 auto;
   width: 60px;
   height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   box-shadow: 0 2px 8px var(--color-shadow);
   background: var(--color-white);
   margin-bottom: 1rem;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .icon {
@@ -97,7 +103,7 @@
 .cardDescription {
   font-size: 1.6rem;
   font-weight: 300;
-  margin-bottom: auto; /* Elimina el margen inferior excesivo */
+  margin-bottom: auto;
   margin-inline: 2rem;
   color: var(--color-gray);
 }
